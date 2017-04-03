@@ -1,0 +1,75 @@
+<div class="page-title" class="page-title"><h1>Ticket {{codeTicket}}</h1></div>
+<!-- Form to create tickets -->
+<div class="create-ticket">
+	<div class="code">
+		<label>Code ticket
+			<input type="text" ng-model="code" disabled>
+		</label>
+	</div>
+	<div class="category">
+		<label>Category
+			<select ng-model="category" disabled>
+				<option>Dúvida</option>
+				<option>Conta violada</option>
+				<option>Reembolso</option>
+				<option>Outros</option>
+			</select>
+		</label>
+	</div>
+	<div class="product">
+		<label>Product
+			<select ng-model="product" disabled>
+				<option>Barbarians</option>
+				<option>Magic Compus</option>
+				<option>General War</option>
+				<option>Outros</option>
+			</select>
+		</label>
+	</div>
+	<div class="opening">
+		<label>Opening date
+			<input type="date" ng-model="opening" disabled>
+		</label>
+	</div>
+	<div class="message">
+		<label>Message by the user
+			<textarea ng-model="message" disabled>
+			</textarea>
+		</label>
+	</div>
+	<div class="file">
+		<label>File
+			<input type="file" fileread="file.name" ng-changed="myFile(file.name)" disabled>
+		</label>
+	</div>
+	<div class="new-ticket">
+		<div class="button">
+			<a href="" ng-click="answerTicket()">Answer</a>
+		</div>
+		<div class="button">
+			<a href="" ng-click="closeTicket()">Close ticket</a>
+		</div>
+	</div>
+	<div ng-show=answer class="responses">
+		<div class="message">
+			<label>Answer by the user
+				<textarea ng-model="userAnswer">
+				</textarea>
+			</label>
+		</div>
+		<div class="button">
+			<a href="" ng-click="sendAnswer(userAnswer)">Send</a>
+		</div>
+	</div>
+</div>
+
+<div class="responses" ng-show="showAnswers">
+	<div class="page-title">
+		<h1>Answers by user</h1>
+	</div>
+	<div>
+		<div ng-repeat="a in answers">
+			<div><label>{{$index +1}}.- Answer: </label><textarea>{{a.answer}}</textarea> <a href="" ng-click="deleteAnswer(a)">Delete answer</a> </div>
+		</div>
+	</div>
+</div>

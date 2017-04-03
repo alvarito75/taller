@@ -1,0 +1,53 @@
+<div class="page-title" class="page-title"><h1>Edit ticket</h1></div>
+<!-- Form to create tickets -->
+<div class="create-ticket">
+	<div class="code">
+		<label>Code ticket
+			<input type="text" ng-model="code">
+		</label>
+	</div>
+	<div class="category">
+		<label>Category
+			<select ng-model="category">
+				<option>Dúvida</option>
+				<option>Conta violada</option>
+				<option>Reembolso</option>
+				<option>Outros</option>
+			</select>
+		</label>
+	</div>
+	<div class="product">
+		<label>Product
+			<select ng-model="product">
+				<option>Barbarians</option>
+				<option>Magic compus</option>
+				<option>General War</option>
+				<option>Outros</option>
+			</select>
+		</label>
+	</div>
+	<div class="opening">
+		<label>Opening date
+			<input type="date" ng-model="opening">
+		</label>
+	</div>
+	<div class="message">
+		<label>Message by the user
+			<textarea ng-model="message">
+			</textarea>
+		</label>
+	</div>
+	<div class="file">
+		<label>Message by the user
+			<input type="file" fileread="file">
+		</label>
+	</div>
+	<div class="new-ticket">
+		<div class="button">
+			<a href="" ng-click="editTicket()">Save</a>
+		</div>
+		<div class="button">
+			<a href="#ver-ticket/" ng-click="answerTicket()">Back</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,69 @@
+<fieldset>
+	<!-- Filter -->
+	<div class="filter">
+    <div class="label-filter">
+		  <label>Filter by:</label>
+    </div>
+		<div class="categoria">
+			<label>Category
+				<select ng-model="categoria">
+					<option selected disabled="">Seleccionar</option>
+					<option>Dúvida</option>
+					<option>Conta violada</option>
+					<option>Outros</option>
+				</select>
+			</label>
+		</div>
+		<div class="producto">
+			<label>Product
+				<select ng-model="producto">
+					<option selected disabled="">Select</option>
+					<option>General war</option>
+					<option>Barbarians</option>
+          <option>Magic compus</option>
+					<option>Outros</option>
+				</select>
+			</label>
+		</div>
+		<div class="button-filter">
+			<button ng-click="filter(categoria, producto)">
+				Filter
+			</button>
+		</div>
+	</div>
+	<!-- Table of tickes -->
+	<table>
+		<thead>
+			<tr>
+				<th>Código del ticket</th>
+				<th>Categoria</th>
+				<th>Producto</th>
+				<th>
+				<a href="" ng-click="sortType='creadoEn'; sortReverse = !sortReverse">Creado en</a>
+				</th>
+				<th>
+        <a href="" ng-click="sortType='ultimaActualizacion'; sortReverse = !sortReverse">Ultima actualización</a></th>
+				<th>Atentido por</th>
+				<th>Status</th>
+				<th>Operation</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat = "i in tickets | orderBy:sortType:sortReverse | filter:filterCategoria && filterProducto">
+				<td><a href="#ticket/{{i.id}}" style="text-decoration: underline;">{{i.id}}</a></td>
+				<td>{{i.categoria}}</td>
+				<td>{{i.producto}}</td>
+				<td>{{i.creadoEn}}</td>
+				<td>{{i.ultimaActualizacion}}</td>
+				<td>{{i.atendidoPor}}</td>
+				<td>
+				 <!-- If r.date contains a value, show it -->
+			  <span ng-if="i.status == 'abierto' || i.status == 'Fechado'">{{i.status}}</span>
+			  <!-- If r.date does not contain a value show placeholder text -->
+			  <span ng-if="i.status != 'abierto' && i.status != 'Fechado'"><a href="#ticket/{{i.id}}">{{i.status}}</a><span>
+				</td>
+				<td><a href="" ng-click="deleteTicket($index)">Delete</a></td>
+			</tr>
+		</tbody>
+	</table>
+</fieldset>

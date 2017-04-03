@@ -1,0 +1,144 @@
+body .page-title{
+	text-align: center;
+}
+
+body .page-title h1{
+	color: #6769d2;
+}
+
+body .menu-dashboard{
+	border: 1px solid gray;
+	background-color: #dddddd;
+	padding: 10px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+
+body .menu-dashboard a{
+	color: black;
+	padding: 5px;
+	text-decoration: none;
+}
+
+body .menu-dashboard a:hover,
+body .new-ticket a:hover{
+	color: #b39255;
+}
+
+body .new-ticket{
+	display: flex;
+  justify-content: space-between;
+}
+
+body .new-ticket .button,
+body .create-ticket .responses .button
+{
+	background: #dddddd;
+	width: 20%;
+	margin: 5px;
+	height: 20px;
+	text-align: center;
+	padding: 5px;
+	border-radius: 10px;
+	border: 1px solid gray;
+	padding-top: 5px;
+	float: left;
+}
+
+body .new-ticket a{
+	color: black;
+	padding: 5px;
+	text-decoration: none;
+}
+
+body .filter{
+	width: 100%;
+	padding: 10px;
+}
+
+body .filter .label-filter{
+	width: 50%;
+}
+
+body .filter .categoria,
+body .filter .producto{
+	float: left; 
+	padding: 10px;
+}
+
+body .filter .button-filter{
+	padding: 10px; 
+	width: 30%;
+	float: left;
+}
+
+body #login,
+body #entrega-alvaro,
+body .lista_users{
+	border: 1px solid gray;
+	background-color: #dddddd;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+body table{
+	border-collapse: collapse;
+  border-spacing: 0;
+  display: table;
+  border: solid 1px #ddd;
+  margin-left: 0;
+  margin-bottom: 1.25em;
+  width: 100%;
+  margin: 0 0 10px;
+}
+
+body table thead{
+	display: table-header-group !important;
+}
+
+body table tbody{
+	display: table-row-group !important;
+	background: #ffffff;
+}
+
+body table tr{
+	display: table-row !important;
+	    border-bottom: 1px solid #000;
+	        padding: 0.1em 0.6em;
+}
+
+body table th{
+	background: #f5f5f2;
+    border: solid #bfbfba;
+    border-width: 1px 0;
+    color: #333;
+    text-transform: uppercase;
+    display: table-cell !important;
+    text-align: left;
+    padding: 10px 12px;
+}
+
+body table td{
+	display: table-cell !important;
+	padding: 10px 12px;
+    text-align: left;
+}
+
+/* Create ticket */
+body .create-ticket .code,
+body .create-ticket .category,
+body .create-ticket .product,
+body .create-ticket .opening,
+body .create-ticket .message,
+body .create-ticket .file{
+	margin: 10px !important;
+	padding: 10px;
+}
+
+body .responses .page-title{
+	text-align: center;
+}
+
+body .responses .page-title h1{
+	color: #6769d2;
+}

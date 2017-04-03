@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app='taller' lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>AngularJS</title>
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-route.js"></script>
+	<script src="js/taller.js"></script>
+	<script src="bower_components/moment/min/moment.min.js"></script>
+	<script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="bower_components/sweetalert/dist/sweetalert.css">
+	<link rel="stylesheet" type="text/css" href="css/taller.css">
+</head>
+<body ng-controller="tallerController">
+	<div class="menu-dashboard">
+		<a href="#/">Dashboard</a>
+		<a href="#create-ticket">Create ticket</a>
+		<a href="#ver-ticket">Tickets</a>
+		<a href="#delete-ticket">Delete ticket</a>
+	</div>
+
+	<div ng-view></div>
+</body>
